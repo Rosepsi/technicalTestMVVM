@@ -1,0 +1,6 @@
+framework module Pods_TechnicalTestMVVM_TechnicalTestMVVMUITests {
+  umbrella header "Pods-TechnicalTestMVVM-TechnicalTestMVVMUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
