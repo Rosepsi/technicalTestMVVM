@@ -14,7 +14,7 @@ public struct CharacterDataWrapper: Codable {
 } 
 
 public struct CharacterDataContainer: Codable {
-    let results: [Character]?
+    let results: Characters?
 }
 
 public struct Character: Codable, Identifiable {
@@ -37,3 +37,5 @@ public struct Image: Codable {
         case imageExtension = "extension"
     }
 }
+
+typealias Characters = [Character]

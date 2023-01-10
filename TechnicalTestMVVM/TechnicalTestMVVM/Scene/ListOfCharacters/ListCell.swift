@@ -7,17 +7,14 @@
 
 import UIKit
 
-class DetailsCell: UITableViewCell {
+class ListCell: UITableViewCell {
 
+    @IBOutlet weak var nameCharacterList : UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        backgroundColor = .clear
+        nameCharacterList.font = UIFont.systemFont(ofSize: 18)
     }
     
 }

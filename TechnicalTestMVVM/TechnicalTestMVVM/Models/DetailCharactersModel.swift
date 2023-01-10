@@ -13,7 +13,7 @@ public struct CharacterDataWrapperDetail: Codable {
 }
 
 public struct DetailCharacterDataContainer: Codable {
-    let results: [CharacterDetail]?
+    let results: CharactersDetail?
 }
 
 struct CharacterDetail: Codable {
@@ -27,4 +27,4 @@ struct CharacterDetail: Codable {
     }
 }
 
-
+typealias CharactersDetail = [CharacterDetail]
