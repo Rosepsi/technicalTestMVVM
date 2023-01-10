@@ -34,17 +34,17 @@
                     <navigationItem key="navigationItem" id="xF5-Kh-5yU"/>
                     <connections>
                         <outlet property="listCharacters" destination="kxU-JP-DGL" id="8Ii-DT-W3l"/>
-                        <segue destination="R4g-3u-Hve" kind="show" id="eXD-JZ-9Tk"/>
+                        <segue destination="R4g-3u-Hve" kind="show" identifier="detailCharacterSegue" id="eXD-JZ-9Tk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1043.0769230769231" y="-28.436018957345969"/>
         </scene>
-        <!--Details Characters View Model-->
+        <!--Details Characters View-->
         <scene sceneID="mby-oZ-5ao">
             <objects>
-                <viewController id="R4g-3u-Hve" customClass="DetailsCharactersViewModel" customModule="TechnicalTestMVVM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="R4g-3u-Hve" customClass="DetailsCharactersView" customModule="TechnicalTestMVVM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O1H-1D-OJK">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -92,9 +92,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="2tq-bG-d1Y"/>
                     <connections>
-                        <outlet property="descriptionCharacter" destination="iFk-AB-S0p" id="Pvu-73-Uy2"/>
-                        <outlet property="imageCharacter" destination="EgD-Ec-sRs" id="Ch7-eB-E4C"/>
-                        <outlet property="nameCharacter" destination="CuE-7V-dWt" id="teC-B0-zcA"/>
+                        <outlet property="descriptionCharacter" destination="iFk-AB-S0p" id="CQE-a4-zDe"/>
+                        <outlet property="imageCharacter" destination="EgD-Ec-sRs" id="Y6C-lo-qy9"/>
+                        <outlet property="nameCharacter" destination="CuE-7V-dWt" id="XzZ-2h-Pvm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="clF-q7-5pz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

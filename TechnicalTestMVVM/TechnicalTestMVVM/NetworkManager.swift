@@ -55,7 +55,7 @@ class NetworkManager {
         }
     }
     
-    func getCharacterDetail (id: Int, completion: @escaping (CharactersDetail)-> ()) {
+    func getCharacterDetail (id: Int, completion: @escaping (Characters)-> ()) {
         AF.request(MarvelApi.getDetailsUrl(id), method: .get).validate(statusCode: 200...299).responseDecodable(of:CharacterDataWrapperDetail.self){response in
             if let result = response.value {
                 completion (result.data?.results ?? [])

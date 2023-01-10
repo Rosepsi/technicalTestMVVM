@@ -28,6 +28,7 @@ public struct Character: Codable, Identifiable {
     }
 }
 
+
 public struct Image: Codable {
     let path: String
     let imageExtension: String
