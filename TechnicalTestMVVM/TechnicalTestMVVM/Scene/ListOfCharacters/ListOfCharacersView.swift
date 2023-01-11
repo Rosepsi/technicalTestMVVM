@@ -27,12 +27,11 @@ class ListOfCharactersView: UIViewController {
         listView?.getCharacters()
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destinationNavigationController = segue.destination as? UINavigationController,
-           let destination = destinationNavigationController.topViewController as? DetailsCharactersView,
+        if let destination = segue.destination as? DetailsCharactersView,
            let indexPath = self.listCharacters.indexPathForSelectedRow {
             listCharacters.deselectRow(at: indexPath, animated: true)
             let characterSelect = characters [indexPath.row]
-            destination.characterDetail = characterSelect
+            destination.characterId = characterSelect.id
         }
     }
 }
