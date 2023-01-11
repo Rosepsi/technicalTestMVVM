@@ -40,8 +40,13 @@ struct MarvelApi {
     private init() {}
 }
 
-class NetworkManager {
-    static let shared = NetworkManager ()
+protocol NetworkManager {
+    func getCharacterList (completion: @escaping (Characters) -> ())
+    func getCharacterDetail (id: Int, completion: @escaping (Characters) -> ())
+}
+
+class NetworkWorker : NetworkManager {
+    static let shared = NetworkWorker ()
     private init () {
     }
     

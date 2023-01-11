@@ -11,11 +11,13 @@ import Alamofire
 class DetailsCharactersViewModel {
     
     var completionDetail : ((Characters) -> Void)?
+    let networkWorker : NetworkManager
+    init(networkWorker: NetworkManager = NetworkWorker.shared) {
+        self.networkWorker = networkWorker
+    }
     
     func getDetailCharacters (id : Int) {
-        
-        NetworkManager.shared.getCharacterDetail(id: id, completion: { detailCharacter in
-            
+        networkWorker.getCharacterDetail(id: id, completion: { detailCharacter in
             self.completionDetail? (detailCharacter)
         }) 
     }

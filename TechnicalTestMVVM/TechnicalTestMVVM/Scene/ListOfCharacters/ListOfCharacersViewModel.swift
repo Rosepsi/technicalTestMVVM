@@ -10,9 +10,13 @@ import UIKit
 class ListOfCharacersViewModel {
     
     var completionList : ((Characters) -> Void)?
+    let networkWorker : NetworkManager
+    init(networkWorker: NetworkManager = NetworkWorker.shared) {
+        self.networkWorker = networkWorker
+    }
     
     func getCharacters () {
-        NetworkManager.shared.getCharacterList { listCharacter in
+        networkWorker.getCharacterList { listCharacter in
             self.completionList? (listCharacter)
         }
     }
